@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --font-family: 'Poppins', sans-serif;
+    --font-family: 'Open Sans', sans-serif;
+}
+body {
+    height: 100vh;
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--violet);
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+.button {
+    background: #fff;
+    padding: 10px 50px;
+    color: var(--violet);
+    border-radius: 50px;
+    border: none;
+}
+.button:hover {
+    cursor: pointer;
+    background: var(--soft-magenta);
+    color: #fff;
+}
+.main {
+    display: flex;
+    gap: 80px;
+    margin: 50px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+.main-content-p {
+    line-height: 30px;
+    margin-right: 40px;
+}
+header {
+    margin: 50px 0 0 50px;
+}
+h1 {
+    margin: 50px 100px 0 0;
+}
+.social-media {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
+    gap: 10px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 50px;
+}
+.attribution a { 
+    color: #fff; 
+}
+.facebook, .twitter, .instagram {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background: none;
+    color: #fff;
+}
+.facebook:hover, .twitter:hover, .instagram:hover {
+    border: 1px solid var(--soft-magenta);
+    cursor: pointer;
+    color: var(--soft-magenta);
+}
+
+
+
+
+@media (max-width: 800px) {
+    body {
+        background-image: url(images/bg-mobile.svg);
+        background-size: contain;
+    }
+    .main {
+        flex-direction: column;
+    }
+    .content {
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+    .social-media {
+        justify-content: center;
+    }
+    h1, .main-content-p, .content, .social-media {
+        margin: 0;
+    }
+}
